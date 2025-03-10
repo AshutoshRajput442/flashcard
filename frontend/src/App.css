@@ -1,0 +1,208 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh; /* Allows content to grow */
+}
+
+/* Container Styling */
+.container {
+  width: 90%;
+  max-width: 600px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  margin-top: 20px; /* Ensures content is not stuck at the top */
+}
+h1 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: auto;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #28a745;
+  box-shadow: 0px 0px 8px rgba(40, 167, 69, 0.5);
+}
+
+/* Auto-expanding Textarea */
+textarea {
+  min-height: 80px;
+  max-height: 300px;
+  overflow-y: auto;
+  resize: vertical;
+}
+
+/* Button Styling */
+button {
+  padding: 12px 15px;
+  font-size: 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+
+/* Flashcard List */
+.flashcard-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Flashcard Styling */
+.flashcard {
+  background: #ffffff;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  transition: transform 0.3s ease-in-out;
+}
+
+.flashcard:hover {
+  transform: translateY(-3px);
+}
+
+.flashcard h3 {
+  margin: 0;
+  color: #333;
+}
+
+.flashcard p {
+  margin: 5px 0;
+  color: #555;
+}
+
+/* Buttons Container */
+.flashcard-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Delete Button */
+.delete-btn {
+  background-color: #dc3545;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+/* View Button */
+.view-btn {
+  background-color: #007bff;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background 0.3s ease-in-out;
+}
+
+.view-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Full Content Page */
+.full-content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.full-content-box {
+  background: white;
+  padding: 20px;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.full-content-box h2 {
+  margin-bottom: 15px;
+}
+
+.full-content-box p {
+  color: #555;
+  font-size: 16px;
+}
+
+.close-btn {
+  background-color: #dc3545;
+  margin-top: 15px;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.close-btn:hover {
+  background-color: #c82333;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  input, textarea, button {
+    font-size: 14px;
+  }
+}
